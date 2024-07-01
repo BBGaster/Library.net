@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories
 {
-    internal class BookRepositori :GenericRepository<Book>,IBookInterface
+    public class BookRepositori :GenericRepository<Book>,IBookInterface
     {
         private LibraryDbContext _context;
         public DbSet<Book> _table;

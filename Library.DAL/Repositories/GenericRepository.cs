@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories
 {
-    internal class GenericRepository<T> : IGenericInterface<T> where T : class
+    public class GenericRepository<T> : IGenericInterface<T> where T : class
     {
         private LibraryDbContext _context;
         public DbSet<T> _table;

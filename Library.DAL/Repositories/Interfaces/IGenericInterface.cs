@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories.Interfaces
 {
-    internal interface IGenericInterface<T> where T : class
+    public interface IGenericInterface<T> where T : class
     {
         
         T Entity { get; }

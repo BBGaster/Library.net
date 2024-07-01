@@ -1,4 +1,5 @@
 using Library.DAL;
+using Library.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,10 @@ builder.Services.AddDbContext<LibraryDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDbConnection"));
 });
 
-
+builder.Services.AddScoped<IBookRepository, BookRepository>();//chiamata per interfaccia per avere la firma dei metodi 
+builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddControllers();
 
 

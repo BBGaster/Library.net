@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.DAL.Entityes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.DAL.Repositories.Interfaces
 {
-    internal interface IBookInterface
+    public interface IBookInterface : IGenericInterface<Book>
     {
     }
 }
