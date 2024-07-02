@@ -23,6 +23,8 @@ namespace Library.BLL.Services.Interfaces
         public bool Delete(int key);
 
         public bool Create(TModel entity);
+
+        public IList<TModel> GetAll();
        
 
     }

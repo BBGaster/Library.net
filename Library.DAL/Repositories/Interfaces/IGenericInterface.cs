@@ -17,5 +17,7 @@ namespace Library.DAL.Repositories.Interfaces
         IList<T> GetAll();
 
         T GetById(int id);
+
+        
     }
 }

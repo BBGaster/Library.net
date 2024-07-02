@@ -7,7 +7,7 @@ using System;
 
 namespace Library.BLL.Services
 {
-    internal class GenericServices<TEntity, TModel> : IGenericService<TEntity, TModel>
+    public class GenericServices<TEntity, TModel> : IGenericService<TEntity, TModel>
         where TModel : class
         where TEntity : class
     {
@@ -74,6 +74,17 @@ namespace Library.BLL.Services
 
             var entity = _mapper.Map<TEntity>(model);
             return _repository.Create(entity);
+        }
+
+        public IList<TModel> GetAll()
+        {
+            var entitylist = _repository.GetAll();
+            var result = new List<TModel>();
+            foreach ( var entity in entitylist)
+            {
+                result.Add(_mapper.Map<TModel>(entity));
+            }
+            return result;
         }
     }
 }

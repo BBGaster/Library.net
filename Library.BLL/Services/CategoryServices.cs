@@ -2,6 +2,7 @@
 using Library.BLL.Model;
 using Library.BLL.Services.Interfaces;
 using Library.DAL.Entityes;
+using Library.DAL.Repositories;
 using Library.DAL.Repositories.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,19 +13,17 @@ using System.Threading.Tasks;
 
 namespace Library.BLL.Services
 {
-    public class AuthorService :GenericServices<Author,AuthorModel>, IAuthorService
+    public class CategoryServices : GenericServices<Category, CategoryModel>, ICategoryServices
     {
-        private readonly IAuthorRepository _repository;
+        private readonly ICategoryRepository _repository;
         private readonly IMapper _mapper;
-        private readonly ILogger<AuthorService> _logger;
+        private readonly ILogger<CategoryServices> _logger;
 
-        public AuthorService(IMapper mapper, IAuthorRepository repository, ILogger<AuthorService> logger) : base(mapper, repository)
+        public CategoryServices(IMapper mapper, ICategoryRepository repository, ILogger<CategoryServices> logger) : base(mapper, repository)
         {
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
-
-
     }
 }
