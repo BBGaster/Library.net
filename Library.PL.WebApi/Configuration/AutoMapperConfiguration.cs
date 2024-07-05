@@ -14,6 +14,7 @@ namespace Library.PL.WebApi.Configuration
             CreateMap<Book, BookModel>().ReverseMap();
             CreateMap<Category,CategoryModel>().ReverseMap();
             CreateMap<Author, AuthorModel>().ReverseMap();
+            
         }
     }
 }

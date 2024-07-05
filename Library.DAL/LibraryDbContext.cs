@@ -14,6 +14,7 @@ namespace Library.DAL
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Author>().Navigation(a => a.Books).AutoInclude();
+            modelBuilder.Entity<Book>().Navigation(b => b.Author).AutoInclude(false);
         }
 
 

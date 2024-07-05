@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Library.BLL.Model
@@ -15,8 +16,9 @@ namespace Library.BLL.Model
         public string? Description { get; set; }
         public DateTime? CraetedDate { get; set; }
         [ForeignKey("AuthorID")]
+
         public required int AuthorID { get; set; }
-        public virtual Author? Author { get; set; }
+        
         public List<CategoryModel> Categories { get; } = new List<CategoryModel>();
     }
 }

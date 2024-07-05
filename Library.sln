@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.DAL", "Library.DAL\Library.DAL.csproj", "{971B0C90-DE37-49F3-B3F7-3CB96A81CB87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.DAL", "Library.DAL\Library.DAL.csproj", "{971B0C90-DE37-49F3-B3F7-3CB96A81CB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.BLL", "Library.BLL\Library.BLL.csproj", "{85D580AF-73FD-4BDA-8B02-23936D578235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.BLL", "Library.BLL\Library.BLL.csproj", "{85D580AF-73FD-4BDA-8B02-23936D578235}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.PL.WebApi", "Library.PL.WebApi\Library.PL.WebApi.csproj", "{60596E60-9586-4D2F-9747-FB97D031179B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.PL.WebApi", "Library.PL.WebApi\Library.PL.WebApi.csproj", "{60596E60-9586-4D2F-9747-FB97D031179B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{C76196E4-D16E-46AD-9038-B09EC5A96CCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{60596E60-9586-4D2F-9747-FB97D031179B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60596E60-9586-4D2F-9747-FB97D031179B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60596E60-9586-4D2F-9747-FB97D031179B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76196E4-D16E-46AD-9038-B09EC5A96CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76196E4-D16E-46AD-9038-B09EC5A96CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76196E4-D16E-46AD-9038-B09EC5A96CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76196E4-D16E-46AD-9038-B09EC5A96CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
